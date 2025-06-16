@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lluvia de Corazones</title>
+<style>
+.corazon {
+position: absolute;
+font-size: 40px;
+color: PINK;
+}
+</style>
+</head>
+<body>
+<script>
+function crearCorazon() {
+const corazon = document.createElement('div');
+corazon.innerHTML = '❤️';
+corazon.classList.add('corazon');
+corazon.style.top = Math.random() * window.innerHeight + 'px';
+corazon.style.left = Math.random() * window.innerWidth + 'px';
+document.body.appendChild(corazon);
+setTimeout(() => {
+corazon.remove();
+}, 2000);
+corazon.style.animation = 'caer 5s linear';
+const keyframes = `
+@keyframes caer {
+0% {
+transform: translateY(0);
+}
+100% {
+transform: translateY(${window.innerHeight}px);
+}
+}
+`;
+const style = document.createElement('style');
+style.innerHTML = keyframes;
+document.head.appendChild(style);
+}
+
+setInterval(crearCorazon, 100);
+</script>
+<style>
+body {
+background-color:WHITE
+}
+</style>
+<P><I><FONT size=5 COLOR="BLACK"><CENTER>Te amo, amor de mi vida. Eres lo más especial que tengo<BR>
+ y me inspiras a ser mejor persona. No tienes idea del gran amor que te tengo. Fui capaz de hacer <BR>
+una página web dedicada a lo nuestro, porque eres alguien muy especial para mí. Ojalá todo el mundo<BR> 
+tuviera una persona como tú a su lado, pero no es así y yo soy afortunado de tenerte en mi vida.<BR><BR>
+
+Si mi corazón hablara, gritaría cada momento que te ama. Te amo por un millón de cosas, <BR>
+pero te amo infinitamente. Agradezco cada segundo a tu lado y eres una persona maravillosa.<BR>
+ Aunque nuestra relación no es perfecta, sigo pensando que tenemos algo muy especial y genuino.<BR><BR>
+
+Te elijo cada día, hasta que me haga una pasa. Eres única en un mundo tan común y por eso <BR>
+te adoro. Quiero darte las gracias por estar a mi lado y te dedico cada latido de<BR>
+ mi corazón. Siempre serás mi primer y último pensamiento del día. <BR>
+Te amo de aquí al infinito y más allá. ❤️<BR><BR><BR>
+De:Ernesto<BR> 
+Para:Fanny
+<BR><BR><BR>
+<IMG SRC=23.JPEG ALT="1" ALIGN=CENTER WIDTH="600" height="500">
+<a href="3.HTML"><img src="volver.PNG" ALIGN=LEFT width="12%" height="12%">
+
+</body>
+</html>
